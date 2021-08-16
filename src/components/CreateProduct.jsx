@@ -1,5 +1,7 @@
-import { useState } from 'react'
-import { useProductsContext } from '../contexts/ProductsContext'
+import { useState } from 'react';
+import { useProductsContext } from '../contexts/ProductsContext';
+import { v4 as uuidv4 } from 'uuid';
+
 
 export default function CreateProduct() {
     const [name, setName] = useState("");
@@ -7,7 +9,7 @@ export default function CreateProduct() {
     const [products, setProducts] = useProductsContext();
 
     function createProduct(e) {
-        const id = Math.floor(Math.random() * 99999999999);
+        const id = uuidv4();
 
         setProducts([ ...products, { id, name, price } ]);
     }
@@ -16,7 +18,7 @@ export default function CreateProduct() {
         <div>
             <input type="text" value={name} onChange={e => setName(e.target.value)} />
             <input type="text" value={price} onChange={e => setPrice(e.target.value)} />
-            <button onClick={createProduct}>Add product!</button>
+            <button style={{ padding: 5 }} onClick={createProduct}>Add product!</button>
         </div>
     )
 }

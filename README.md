@@ -8,9 +8,9 @@ You need to expand this application:
 1. Create a new Context called "LocaleContext"
 2. This LocaleContext has one piece of data; "locale"
 3. The "locale" can be "en-us", "en-gb" or "de-de"
-4. If the "locale" is "en-us" you should the product price as USD ($)
-5. If the "locale" is "en-gb" you should the product price as GBP (£)
-6. If the "locale" is "de-de" you should the product price as EUR (€)
+4. If the "locale" is "en-us" you should see the product price as USD ($)
+5. If the "locale" is "en-gb" you should see the product price as GBP (£)
+6. If the "locale" is "de-de" you should see the product price as EUR (€)
 7. You don't need to worry about exchange rates. For this app 1$ === 1€ === 1£
 8. Allow the user to switch between different locales somehow
 9. Allow the user to delete products from the list
